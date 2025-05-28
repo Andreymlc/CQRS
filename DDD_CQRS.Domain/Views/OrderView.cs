@@ -43,19 +43,19 @@ public class OrderView
     public override string ToString()
     {
         var sb = new StringBuilder();
-        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++");
+        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         sb.AppendLine($" ЗАКАЗ №: {Id,-28}");
-        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++");
+        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         sb.AppendLine($" Сумма: {Cost:C}{"",23}");
         sb.AppendLine($" Статус: {Status.ToRussianString(),-25}");
         sb.AppendLine($" Дата создания: {CreatedAt:dd.MM.yyyy HH:mm}{"",12}");
-        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++");
+        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         sb.AppendLine($" Блюда:{"",32}");
 
         foreach (var item in _items)
             sb.AppendLine($"   • {item.DishView.Name,-25} × {item.Quantity,3} ({item.TotalPrice:C}) ");
 
-        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++");
+        sb.AppendLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         return sb.ToString();
     }
 }

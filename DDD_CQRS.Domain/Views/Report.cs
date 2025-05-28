@@ -12,7 +12,7 @@ public class Report
 
     public override string ToString() =>
         $"""
-         ++++++++++++++++++++++ Отчет ++++++++++++++++++++++
+         ++++++++++++++++++++++++++++++ Отчет ++++++++++++++++++++++++++++++
          Дата: {PublishDate:dd.MM.yyyy HH:mm:ss}
          Причина обновления: {Reason}
          Всего заказов: {OrdersQuantity}
@@ -20,6 +20,6 @@ public class Report
          Доход: {Income:C}
          
          Самый популярный продукт: {MostPopularProducts.Name, -10} × {MostPopularProducts.Quantity, -3}
-         +++++++++++++++++++++++++++++++++++++++++++++++++++
+         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          """;
 }

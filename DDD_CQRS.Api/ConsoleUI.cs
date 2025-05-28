@@ -124,7 +124,7 @@ public class ConsoleUI(IMediator mediator)
 
     private void GetReport()
     {
-        Console.Write("Количество последних заказов для получения: ");
+        Console.Write("Введите, сколько последних отчетов вы хотите получить: ");
         var quantityReports = ReadIntInput();
         
         var reports = mediator.Send(new GetReport { QuantityReports = quantityReports}).Result;
@@ -273,7 +273,7 @@ public class ConsoleUI(IMediator mediator)
             
             new MenuItem { Description = "Посмотреть историю заказов (последних n)", Action = GetOrderHistory },
             
-            new MenuItem { Description = "Посмотреть отчет", Action = GetReport },
+            new MenuItem { Description = "Посмотреть отчеты", Action = GetReport },
             
             new MenuItem { Description = "Выбрать заказ", Action = ChoiceOrder, IsAvailable = () => _currentOrder is not null },
             
